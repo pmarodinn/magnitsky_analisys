@@ -1,0 +1,46 @@
+# Data directories
+data/
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# API keys and secrets
+.env
+secrets/
+config/secrets.yaml
+
+# Model files (large)
+models/*.pkl
+models/*.joblib
+*.h5
+
+# Results (temporary)
+results/temp/
