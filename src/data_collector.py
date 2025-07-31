@@ -14,10 +14,19 @@ class DataCollector:
     Class to collect financial data, sanctions data, and news sentiment
     """
     
-    def __init__(self, config_path="../config/config.yaml"):
+    def __init__(self, config_path=None):
         """Initialize with configuration"""
-        with open(config_path, 'r') as file:
-            self.config = yaml.safe_load(file)
+        if config_path is None:
+            # Get the directory of this file and construct path to config
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            config_path = os.path.join(os.path.dirname(current_dir), "config", "config.yaml")
+        
+        try:
+            with open(config_path, 'r') as file:
+                self.config = yaml.safe_load(file)
+        except FileNotFoundError:
+            print(f"Warning: Config file not found at {config_path}. Using default settings.")
+            self.config = {}
     
     def get_financial_data(self, ticker, start_date, end_date):
         """
