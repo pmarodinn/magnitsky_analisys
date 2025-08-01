@@ -6,7 +6,7 @@ Claro, aqui está o detalhamento em formato `.md`.
 
   * **Versão:** 1.0
   * **Data:** 31 de julho de 2025
-  * **Autor:** Pedro Schuves Marodin
+  * **Autores:** Pedro Schuves Marodin e Acyr Eduardo Marconato
 
 -----
 
